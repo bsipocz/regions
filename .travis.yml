@@ -26,7 +26,7 @@ env:
         - SETUP_CMD='test'
         - MAIN_CMD='python setup.py'
         - PIP_DEPENDENCIES=''
-        - CONDA_DEPENDENCIES='Cython shapely wcsaxes'
+        - CONDA_DEPENDENCIES='Cython shapely'
 
         # If there are matplotlib or other GUI tests, uncomment the following
         # line to use the X virtual framebuffer.
@@ -49,6 +49,7 @@ matrix:
         # may run for a long time
         - python: 3.5
           env: SETUP_CMD='build_sphinx -w'
+               CONDA_DEPENDENCIES='Cython shapely wcsaxes'
 
         # Try Astropy development version
         - python: 2.7
